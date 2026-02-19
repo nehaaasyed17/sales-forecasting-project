@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 st.title("AI-Based Sales Forecasting App")
 
 # Load dataset
-data = pd.read_csv("Walmart.csv")
+data = pd.read_csv("Walmart.xlsx")
 
 # Convert Date column to datetime (DD-MM-YYYY format)
 data['Date'] = pd.to_datetime(data['Date'], dayfirst=True)
@@ -65,4 +65,5 @@ st.pyplot(plt)
 # Model performance
 st.subheader("Model Performance")
 r2 = model.score(X, y)
+
 st.write(f"R² Score: {r2:.2f}")
